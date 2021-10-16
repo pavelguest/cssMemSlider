@@ -42,7 +42,7 @@ body {
 .images img {
   height: 100%;
   width: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .slider input {
   display: none;
@@ -64,7 +64,7 @@ body {
 .text p {
   height: 100%;
   width: 25%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin: 0;
   padding: 0;
   line-height: 50px;
@@ -95,11 +95,12 @@ span {
   cursor: pointer;
   transition: all 0.15s ease;
 }
-.dots label span:hover {
+.dots label:hover span {
   border: solid violet 3px;
   background: violet;
+  padding: 15px;
 }
-.dots label span:active {
+.dots label:active span {
   border: solid rgb(216, 35, 216) 3px;
   background: rgb(216, 35, 216);
 }
