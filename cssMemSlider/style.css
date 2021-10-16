@@ -12,7 +12,7 @@ body {
   font-size: 25px;
 }
 .wrapper {
-  max-width: 1400px;
+  max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -88,6 +88,22 @@ body {
   background: violet;
 }
 .dots label:active {
+  border: solid rgb(216, 35, 216) 3px;
+  background: rgb(216, 35, 216);
+}
+#mem1:checked ~ .control .dots .check__one {
+  background: none;
+}
+#mem2:checked ~ .control .dots .check__two {
+  background: none;
+}
+#mem3:checked ~ .control .dots .check__three {
+  background: none;
+}
+#mem4:checked ~ .control .dots .check__four {
+  background: none;
+}
+#mem5:checked ~ .control .dots .check__five {
   background: none;
 }
 #mem1:checked ~ .images .image1 {
