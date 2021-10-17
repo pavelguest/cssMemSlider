@@ -1,0 +1,166 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+  background-color: royalblue;
+  color: #ffffff;
+  font-size: 25px;
+}
+.wrapper {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.header {
+  text-align: center;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__title {
+  font-size: 2em;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.images {
+  display: flex;
+  width: 100%;
+}
+.images img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.slider input {
+  display: none;
+}
+.control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.slider__two {
+  width: 40%;
+  overflow: hidden;
+}
+.text {
+  display: flex;
+  width: 500%;
+}
+.text p {
+  height: 100%;
+  width: 25%;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  column-gap: 10px;
+}
+span {
+  display: block;
+}
+.dots label {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dots label span {
+  height: 25px;
+  width: 25px;
+  background: #fff;
+  border: solid #fff 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.dots label:hover span {
+  border: solid violet 3px;
+  background: violet;
+  padding: 15px;
+}
+.dots label:active span {
+  border: solid rgb(216, 35, 216) 3px;
+  background: rgb(216, 35, 216);
+}
+#mem1:checked ~ .control .dots .check__one span {
+  background: none;
+}
+#mem2:checked ~ .control .dots .check__two span {
+  background: none;
+}
+#mem3:checked ~ .control .dots .check__three span {
+  background: none;
+}
+#mem4:checked ~ .control .dots .check__four span {
+  background: none;
+}
+#mem5:checked ~ .control .dots .check__five span {
+  background: none;
+}
+#mem1:checked ~ .images .image1 {
+  margin-left: 0;
+}
+#mem2:checked ~ .images .image2 {
+  margin-left: -100%;
+}
+#mem3:checked ~ .images .image3 {
+  margin-left: -200%;
+}
+#mem4:checked ~ .images .image4 {
+  margin-left: -300%;
+}
+#mem5:checked ~ .images .image5 {
+  margin-left: -400%;
+}
+#mem1:checked ~ .control .slider__two .text .text1 {
+  margin-left: 0%;
+}
+#mem2:checked ~ .control .slider__two .text .text1 {
+  margin-left: -25%;
+}
+#mem3:checked ~ .control .slider__two .text .text1 {
+  margin-left: -50%;
+}
+#mem4:checked ~ .control .slider__two .text .text1 {
+  margin-left: -75%;
+}
+#mem5:checked ~ .control .slider__two .text .text1 {
+  margin-left: -100%;
+}
+@media (max-width: 1024px) {
+  .control {
+    flex-direction: column-reverse;
+    row-gap: 20px;
+  }
+  .slider__two {
+    width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .dots label span {
+    height: 20px;
+    width: 20px;
+  }
+}
